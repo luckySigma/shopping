@@ -22,7 +22,7 @@
 <title>Shopping - ${title}</title>
 <script>
 	window.menu = '${title}';
-	
+
 	window.contextRoot = '${contextRoot}';
 </script>
 
@@ -45,27 +45,35 @@
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
 		<!-- Page Content -->
-		
+
 		<div class="content">
-		<c:if test="${userClickHome == true }">
-			<%@include file="home.jsp"%>
-		</c:if>
-		<c:if test="${userClickAbout == true }">
-			<%@include file="about.jsp"%>
-		</c:if>
-		<c:if test="${userClickContact == true }">
-			<%@include file="contact.jsp"%>
-		</c:if>
-		
-		<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true }">
-			<%@include file="listProducts.jsp"%>
-		</c:if>
-		
-		<!-- User Click Show Product -->
-		<c:if test="${UserClickShowProduct == true}">
-			<%@include file="singleProduct.jsp"%>
-		</c:if>
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="container">
+
+
+						<div class="jumbotron">
+
+							<h1 align="center">${errorTitle}</h1>
+							<hr />
+
+
+							<blockquote style="word-wrap:break-word">${errorDescription}</blockquote>
+
+						</div>
+
+
+					</div>
+
+				</div>
+
+			</div>
+
 		</div>
+
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
@@ -74,7 +82,7 @@
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<!-- Data Table Plugin -->
 		<script src="${js}/jquery.dataTables.js"></script>
-		
+
 		<!-- Data Table BoostrapScript -->
 		<script src="${js}/dataTables.bootstrap4.js"></script>
 

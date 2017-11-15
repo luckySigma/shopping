@@ -11,8 +11,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
   
    ">
-   <context:component-scan base-package="net.asd.shopping.controller"/>
-   <context:component-scan base-package="net.asd.shoppingbackend.daoimpl"/>
+   <context:component-scan base-package="net.asd.shopping"/>
+   <context:component-scan base-package="net.asd.shoppingbackend"/>
    
    
    
